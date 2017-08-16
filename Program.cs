@@ -6,7 +6,8 @@ namespace backpack_dotnet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var backpack = new Backpack("Big", "Pen");
+            Console.WriteLine(backpack);
         }
     }
 }

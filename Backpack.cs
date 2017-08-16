@@ -17,18 +17,25 @@ namespace backpack_dotnet
 
      public int AddTrackedItem()
      {
+         if (Item == "Pencil" || Item == "Folder" || Item == "Pen")
+         {
          TrackedItems++;
-         return TrackedItems;
+         }
+        return TrackedItems;
+
      }
      public int RemoveTrackedItem()
      {
-         if (TrackedItems > 0)
+         if (TrackedItems > 0 && Item == "Pencil" || Item == "Folder" || Item == "Pen")
          {
              TrackedItems--;
          }
          return TrackedItems;
      }
-    public
+    public override string ToString()
+    {
+        return $"You have added a {this.Item} to your {this.Type} BackPack. You have this many tracked items in your bag:{this.TrackedItems} ";
+    }
  }
 
 }
