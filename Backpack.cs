@@ -15,18 +15,18 @@ namespace backpack_dotnet
          Item = item; 
      }
 
-     public int AddTrackedItem()
+     public int AddTrackedItem(string item)
      {
-         if (Item == "Pencil" || Item == "Folder" || Item == "Pen")
+         if (item == "Pencil" || item == "Folder" || item == "Pen")
          {
          TrackedItems++;
          }
         return TrackedItems;
 
      }
-     public int RemoveTrackedItem()
+     public int RemoveTrackedItem(string item)
      {
-         if (TrackedItems > 0 && Item == "Pencil" || Item == "Folder" || Item == "Pen")
+         if (TrackedItems > 0 && item == "Pencil" || item == "Folder" || item == "Pen")
          {
              TrackedItems--;
          }
